@@ -1,0 +1,13 @@
+uuid_app:
+  build: .
+  ports:
+    - "8000:8000"
+  environment:
+    ENV: Development
+  volumes:
+    - ./app:/srv/app/current   
+  links:
+    - dnmonster
+
+dnmonster:
+      image: amouat/dnmonster:1.0

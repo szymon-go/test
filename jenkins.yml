@@ -1,0 +1,13 @@
+uuid_app:
+  build: .
+  ports:
+    - "9090"
+  environment:
+    ENV: PROD
+  volumes:
+    - ./app:/srv/app/current   
+  links:
+    - dnmonster
+
+dnmonster:
+      image: amouat/dnmonster:1.0
