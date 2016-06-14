@@ -4,8 +4,8 @@ uuid_app:
     - "9090"
   environment:
     ENV: PROD
-  volumes:
-    - ./app:/srv/app/current   
+#  volumes:
+#    - ./app:/srv/app/current
   links:
     - dnmonster
 
