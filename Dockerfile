@@ -4,6 +4,7 @@ RUN groupadd -r deploy && useradd -r -g deploy deploy
 
 
 USER deploy
+RUN mkdir /home/deploy
 WORKDIR /srv/app/current
 COPY app /srv/app/current
 COPY cmd.sh /
