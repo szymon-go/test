@@ -2,6 +2,8 @@ FROM php:7.0-fpm
 
 RUN groupadd -r deploy && useradd -r -g deploy deploy
 
+RUN apt-get update && apt-get install -y \
+  unzip
 
 #USER deploy
 #RUN mkdir /home/deploy
